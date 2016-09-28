@@ -1,0 +1,27 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+def defaultEncoding = 'UTF-8'
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+
+def jdkVersion = 1.8
+sourceCompatibility = jdkVersion
+targetCompatibility = jdkVersion
+
+repositories {
+  mavenCentral()
+  jcenter()
+}
+
+dependencies {
+	compile 'org.flywaydb:flyway-core:4.+'
+	compile 'org.postgresql:postgresql:9.4.+'
+}
+
+mainClassName = "Migrations"
+
+task stage2 {
+  dependsOn run
+}
