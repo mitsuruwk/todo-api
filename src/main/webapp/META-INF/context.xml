@@ -1,0 +1,7 @@
+<Context>
+	<Resource name="jdbc/todoapi" type="javax.sql.DataSource" auth="Container"
+		factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+		driverClassName="org.postgresql.Driver" url="jdbc:postgresql://localhost:5432/tododb"
+		username="todoadmin" password="K9T0my8eJG8UXncuaTwDC7BclHpOg9H6"
+		maxActive="20" maxIdel="5" maxWait="5000" />
+</Context>

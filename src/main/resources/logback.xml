@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE logback>
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- http://logback.qos.ch/manual/mdc.html 参照  -->
+      <pattern>%d{HH:mm:ss} %p %c %X{req.requestURI} %X{req.method}  %m%n</pattern>
+    </encoder>
+  </appender>
+  <root>
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
